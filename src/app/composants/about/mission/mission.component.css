@@ -1,0 +1,35 @@
+.half-half-image-text {
+    padding: 70px 0px;
+    padding-top: 250px;
+    padding-bottom: 100px;
+    background-color: #f1f1f1;
+  }
+  
+  .half-half-image-text h1 {
+    color: #800000;
+  }
+  
+  .half-half-image-text .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 35px 0px;
+  }
+  
+  .half-half-image-text .content p {
+    font-size: 22px;
+  }
+  
+  .half-half-image-text .img {
+    min-height: 320px;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .hama{
+    font-size: 22px;
+  }
+  li {
+   color: black;
+  }
+  
+  

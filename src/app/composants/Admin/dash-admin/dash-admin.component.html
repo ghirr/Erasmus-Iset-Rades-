@@ -1,0 +1,149 @@
+<header-admin></header-admin>
+<div class="hama">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Projects</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Partenaires</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Events</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" 
+              id="tables-tab" 
+              data-bs-toggle="tab" 
+              data-bs-target="#tables" 
+              type="button" 
+              role="tab" 
+              aria-controls="tables" 
+              aria-selected="false" >
+        Team
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+          <div class="progress-table-wrap">
+            <div class="progress-table">
+                <div class="table-head">
+                    <div class="visit">Project Name</div>
+                    <div class="country">Image</div>
+                    <div class="visit">categorie</div>
+                    <div class="visit">Date Debut</div>
+                    <div class="visit">Date Fin</div>
+                    <div class="visit">Edit</div>
+                    <div class="visit">Delete</div>
+                    <!--<div class="visit">description</div>-->
+                </div>
+                <div class="table-row" *ngFor="let p of projects">
+                    <div class="visit" style="color:rgb(168, 100, 100);"><b>{{p.projectName}}</b></div>
+                    <div class="country"> <img src="{{p.image}}" style="height: 50px; width: 100px;margin-left: 5px;"></div>
+                    <div class="visit">{{p.catagorie}}</div>
+                    <div class="visit">{{formatDate(p.dateDebutProject)}}</div>
+                    <div class="visit">{{ formatDate(p.dateFinProject) }}</div>
+
+
+
+                   <!--- <div class="visit">{{p.description}}</div>-->
+                   <div class="visit"> 
+                    <button type="button" class="btn btn-info" (click)="editProject(p._id)" >Edit</button>
+                  </div> 
+                    <div class="visit">
+                        <button type="button" class="btn btn-danger" (click)="deleteProject(p._id)" >delete</button>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+
+
+      <div class="progress-table-wrap">
+        <div class="progress-table">
+            <div class="table-head">
+                <div class="visit">Partenaire</div>
+                <div class="country">Countries</div>
+                <div class="visit">contact</div>
+                <div class="visit" style="margin-left: 20px;">Date</div>
+                <div class="visit">Delete</div>
+                <div class="visit">Edit</div>
+            </div>
+            <div class="table-row" *ngFor="let p of partenaires">
+                <div class="visit" style="color:rgb(168, 100, 100);"><b>{{p.partenaireName}}</b></div>
+                <div class="country"> <img src="{{p.image}}" alt="flag">{{p.nomPays}}</div>
+                <div class="visit">{{p.email}}</div>
+                <div class="visit" style="margin-left: 20px;">
+                    {{formatDate(p.dateDePartenariat)}}
+                </div>
+                <div class="visit">
+                  <button type="button" class="btn btn-danger"  (click)="deletePartenaire(p._id)">delete</button>
+                </div>
+              <div class="visit"> 
+                  <button type="button" class="btn btn-info" (click)="editPartenaire(p._id)" >Edit</button>
+                </div> 
+            </div>
+        </div>
+    </div></div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+
+ <div class="progress-table-wrap">
+            <div class="progress-table">
+                <div class="table-head">
+                    <div class="visit">Event</div>
+                    <div class="country">Image</div>
+                    <div class="visit">Date Debut</div>
+                    <div class="visit">Date Fin</div>
+                    <div class="visit">Delete</div>
+                    <div class="visit">Edit</div>
+                  </div>
+                  <div class="table-row" *ngFor="let e of events">
+                      <div class="visit" style="color:rgb(168, 100, 100);"><b>{{e.name}}</b></div>
+                      <div class="country"> <img src="{{e.image}}" style="height: 50px; width: 100px;margin-left: 5px;"></div>
+                      <div class="visit">{{formatDate(e.dateDebut)}}</div>
+                      <div class="visit">{{ formatDate(e.dateFin) }}</div>
+                      <div class="visit">
+                          <button type="button" class="btn btn-danger"  (click)="deleteEvent(e._id)">delete</button>
+                        </div>
+                      <div class="visit"> 
+                          <button type="button" class="btn btn-info" (click)="editEvent(e._id)" >Edit</button>
+                        </div> 
+                  </div>
+              </div>
+          </div>
+      
+    </div>
+  </div>
+  <div class="tab-pane fade" id="tables" role="tabpanel" aria-labelledby="tables-tab">
+    <div class="progress-table-wrap">
+      <div class="progress-table">
+          <div class="table-head">
+              <div class="visit">Name</div>
+              <div class="country">Image</div>
+              <div class="visit">profession</div>
+              <div class="visit">email</div>
+              <div class="visit">description</div>
+              <div class="visit">Delete</div>
+              <div class="visit">Edit</div>
+          </div>
+          <div class="table-row" *ngFor="let t of team">
+              <div class="visit" style="color:rgb(168, 100, 100);"><b>{{t.name}}</b></div>
+              <div class="country"> <img src="{{t.image}}" style="height: 120px; width: 140px;margin-left: 5px;"></div>
+              <div class="visit">{{t.profession}}</div>
+              <div class="visit">{{t.email}}</div>
+              <div class="visit">{{t.description}}</div>
+              <div class="visit">
+                  <button type="button" class="btn btn-danger"  (click)="deleteTeam(t._id)">delete</button>
+                </div>
+              <div class="visit"> 
+                  <button type="button" class="btn btn-info"  (click)="editTeam(t._id)">Edit</button>
+                </div> 
+          </div>
+      </div>
+  </div>
+  </div>
+</div>

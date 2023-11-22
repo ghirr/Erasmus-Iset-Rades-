@@ -1,0 +1,60 @@
+<header-admin></header-admin>
+
+<div class="forms">
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      
+      <h1 class="h1 text-center text-dark">{{titre}}</h1>
+      <form #addEventForm="ngForm"  (ngSubmit)="addEditEvent()" enctype="multipart/form-data">
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label"> Event Name </label>
+          <input
+            type="text"
+            name="projectName"
+            id="projectName"
+            placeholder=""
+            class="formbold-form-input"
+            [(ngModel)]="event.name"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Date Debut</label>
+          <input type="date" name="dateDebutProject" id="dateDebutProject" class="formbold-form-input"  [(ngModel)]="event.dateDebut" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Date Fin</label>
+          <input type="date" name="dateFinProject" id="dateFinProject" class="formbold-form-input"  [(ngModel)]="event.dateFin" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label"> Description </label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias nobis, omnis iusto recusandae enim? Consequatur ullam sint voluptatem eveniet, temporibus doloremque fugit vel excepturi, quas vero nemo iusto nisi?"
+            class="formbold-form-input"
+            [(ngModel)]="event.description"
+            [ngModelOptions]="{ standalone: true }"
+          ></textarea>
+        </div>
+  
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label">
+            Event Image
+          </label>
+          <input
+          type="file"
+          name="image"
+          id="image"
+          class="formbold-form-input formbold-form-file"
+          #filePicker
+          (change)="onImageSelected($event)" multiple
+        />
+        </div>
+        
+  
+        <button class="formbold-btn" type="submit">{{button}}</button>
+      </form>
+    </div>
+  </div>
+</div>

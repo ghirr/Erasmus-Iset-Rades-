@@ -1,0 +1,58 @@
+<header-admin></header-admin>
+<div class="forms">
+<div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      <h1 class="h1 text-center text-dark">{{titre}}</h1>
+      <form #addPartenaireForm="ngForm"  (ngSubmit)="addEditPartenaire()" enctype="multipart/form-data">
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label"> Partenaire Name </label>
+          <input
+            type="text"
+            name="projectName"
+            id="projectName"
+            placeholder=""
+            class="formbold-form-input"
+            [(ngModel)]="partenaire.partenaireName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Contact</label>
+          <input type="email" name="email" id="email" class="formbold-form-input" placeholder="company@email.cb"  [(ngModel)]="partenaire.email" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Date Partenariat</label>
+          <input type="date" name="dateFinProject" id="dateFinProject" class="formbold-form-input"  [(ngModel)]="partenaire.dateDePartenariat" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label">Pays Name </label>
+          <input
+            type="text"
+            name="pays"
+            id="pays"
+            placeholder=""
+            class="formbold-form-input"
+            [(ngModel)]="partenaire.nomPays"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label">
+            Pays flag
+          </label>
+          <input
+          type="file"
+          name="image"
+          id="image"
+          class="formbold-form-input formbold-form-file"
+          #filePicker
+          (change)="onImageSelected($event)" multiple
+        />
+        </div>
+        
+  
+        <button class="formbold-btn" type="submit">{{button}}</button>
+      </form>
+    </div>
+  </div>
+</div>

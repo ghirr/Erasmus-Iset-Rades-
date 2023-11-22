@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/***********************
+ intro 
+ ************************/
+
+ .intro {
+	background: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+  }
+  
+  .slider {
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	transform: translateY(100%);
+	z-index: 99999;
+  }
+  
+  .intro-logo {
+	width: 15rem;
+	height: auto;
+  }
+  
+  .hide {
+	background-color: white;
+	overflow: hidden;
+  }
+  
+  .hide img {
+	transform: translateY(100%);
+  }
+  
+/***********************
+ intro 
+ ************************/

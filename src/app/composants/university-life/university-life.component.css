@@ -1,0 +1,559 @@
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "F37 Ginger", Helvetica, Arial, sans-serif;
+    font-style: normal;
+    letter-spacing: 0.0025em;
+    color: #1a1d24;
+    overflow-x: hidden;
+}
+
+
+/* Font styles */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-style: normal;
+    font-weight: bold;
+    color: #e12744;
+    margin-top: 5vmin !important;
+}
+
+h1,
+.h1 {
+    font-size: 90px;
+    line-height: 78%;
+}
+
+h2,
+.h2 {
+    font-size: 56px;
+    line-height: 125%;
+    letter-spacing: 0.005em;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 178%;
+    letter-spacing: 0.0025em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+/* Font styles over */
+
+
+/* Container */
+
+.flex-container {
+    margin: 200px auto;
+    max-width: 1440px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.col-left {
+    -webkit-box-ordinal-group: -1;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+
+/* Container over */
+
+
+/* Global styles */
+
+.float-right {
+    float: right;
+}
+
+.ml200 {
+    margin-left: 200px;
+}
+
+.mr200 {
+    margin-right: 200px;
+}
+
+
+/* Global style over */
+
+
+/* Content side */
+
+.col-copy {
+    max-width: 75%;
+}
+
+
+/* Content side over*/
+
+
+/* Circle side */
+
+.col-image {
+    position: relative;
+    width: 650px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+     width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+}
+
+.rotating-ring {
+    position: absolute;
+    -webkit-animation: 100s linear infinite;
+    animation: 100s linear infinite;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-animation-name: u57800da0;
+    animation-name: u57800da0;
+}
+
+@-webkit-keyframes u57800da0 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes u57800da0 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn);
+    }
+}
+
+.circle {
+    position: absolute;
+    display: inline-block;
+    max-width: 135px;
+    color: white;
+    text-align: center;
+}
+
+.circle::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: "";
+    top: -17px;
+    left: -17px;
+    z-index: -1;
+    padding: 17px;
+    background: #cc0000;
+    box-shadow: 0 0 0 1px rgba(204, 0, 0, 0);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+}
+
+.circle:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 100%;
+    height: 0;
+}
+
+.circle span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.circle span em {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
+    color: #FFCFD7;
+}
+
+.circle:hover:after {
+    background: #fff;
+    box-shadow: 0 0 0 10px rgba(204, 0, 0, 0.3);
+}
+
+.circle:hover {
+    color: #cc0000;
+}
+
+.circle:hover i {
+    color: #cc00005c
+}
+
+
+/* Circle side over */
+
+
+/* Campus life bubbles */
+
+.campus_life>*:nth-of-type(1) {
+    -webkit-transform: rotate(290deg) translate(22em) rotate(-290deg);
+    transform: rotate(290deg) translate(22em) rotate(-290deg);
+}
+
+.campus_life>*:nth-of-type(2) {
+    -webkit-transform: rotate(220deg) translate(26em) rotate(-220deg);
+    transform: rotate(220deg) translate(26em) rotate(-220deg);
+}
+
+.campus_life>*:nth-of-type(3) {
+    -webkit-transform: rotate(160deg) translate(21em) rotate(-160deg);
+    transform: rotate(160deg) translate(21em) rotate(-160deg);
+    width: 100px;
+}
+
+.campus_life>*:nth-of-type(4) {
+    -webkit-transform: rotate(55deg) translate(16em) rotate(-55deg);
+    transform: rotate(55deg) translate(16em) rotate(-55deg);
+}
+
+
+/* Campus life bubbles over */
+
+
+/* Learning and study bubbles */
+
+.learning_study>*:nth-of-type(1) {
+    -webkit-transform: rotate(288deg) translate(22em) rotate(-288deg);
+    transform: rotate(288deg) translate(22em) rotate(-288deg);
+}
+
+.learning_study>*:nth-of-type(2) {
+    -webkit-transform: rotate(330deg) translate(18em) rotate(-330deg);
+    transform: rotate(330deg) translate(18em) rotate(-330deg);
+}
+
+.learning_study>*:nth-of-type(3) {
+    -webkit-transform: rotate(50deg) translate(15em) rotate(-50deg);
+    transform: rotate(50deg) translate(15em) rotate(-50deg);
+}
+
+.learning_study>*:nth-of-type(4) {
+    -webkit-transform: rotate(100deg) translate(17em) rotate(-100deg);
+    transform: rotate(100deg) translate(17em) rotate(-100deg);
+}
+
+.learning_study>*:nth-of-type(5) {
+    -webkit-transform: rotate(145deg) translate(21em) rotate(-145deg);
+    transform: rotate(145deg) translate(21em) rotate(-145deg);
+}
+
+
+/* Learning and study bubbles over */
+
+
+/* only at murdoch bubbles */
+
+.only_murdoch>*:nth-of-type(1) {
+    -webkit-transform: rotate(225deg) translate(26em) rotate(-225deg);
+    transform: rotate(225deg) translate(26em) rotate(-225deg);
+    width: 112px;
+}
+
+.only_murdoch>*:nth-of-type(2) {
+    -webkit-transform: rotate(195deg) translate(24em) rotate(-195deg);
+    transform: rotate(195deg) translate(24em) rotate(-195deg);
+}
+
+.only_murdoch>*:nth-of-type(3) {
+    -webkit-transform: rotate(165deg) translate(24em) rotate(-165deg);
+    transform: rotate(165deg) translate(24em) rotate(-165deg);
+    max-width: 157px;
+}
+
+.only_murdoch>*:nth-of-type(4) {
+    -webkit-transform: rotate(90deg) translate(16em) rotate(-90deg);
+    transform: rotate(90deg) translate(16em) rotate(-90deg);
+}
+
+.only_murdoch>*:nth-of-type(5) {
+    -webkit-transform: rotate(45deg) translate(15em) rotate(-45deg);
+    transform: rotate(45deg) translate(15em) rotate(-45deg);
+    width: 115px;
+}
+
+
+/* only at murdoch bubbles over */
+
+
+/* Responsive */
+
+@media (max-width: 1500px) {
+    .flex-container {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .flex-container {
+        margin: 70px auto;
+    }
+    .col-left {
+        left: -150px
+    }
+    .col-copy {
+        max-width: 90%;
+    }
+    .col-image {
+        transform: scale(0.88);
+        -webkit-transform: scale(0.88);
+        right: -150px;
+    }
+    .mr200 {
+        margin-right: 0;
+    }
+    /* Campus life bubbles */
+    .campus_life>*:nth-of-type(1) {
+        -webkit-transform: rotate(240deg) translate(25em) rotate(-240deg);
+        transform: rotate(240deg) translate(25em) rotate(-240deg);
+    }
+    .campus_life>*:nth-of-type(2) {
+        -webkit-transform: rotate(210deg) translate(26em) rotate(-210deg);
+        transform: rotate(210deg) translate(26em) rotate(-210deg);
+    }
+    .campus_life>*:nth-of-type(4) {
+        -webkit-transform: rotate(125deg) translate(19em) rotate(-125deg);
+        transform: rotate(125deg) translate(19em) rotate(-125deg);
+    }
+    /* Campus life bubbles over */
+    /* Learning and study bubbles */
+    .learning_study>*:nth-of-type(1) {
+        -webkit-transform: rotate(288deg) translate(22em) rotate(-288deg);
+        transform: rotate(288deg) translate(22em) rotate(-288deg);
+    }
+    .learning_study>*:nth-of-type(2) {
+        -webkit-transform: rotate(330deg) translate(18em) rotate(-330deg);
+        transform: rotate(330deg) translate(18em) rotate(-330deg);
+    }
+    .learning_study>*:nth-of-type(3) {
+        -webkit-transform: rotate(15deg) translate(15em) rotate(-15deg);
+        transform: rotate(15deg) translate(15em) rotate(-15deg);
+    }
+    .learning_study>*:nth-of-type(4) {
+        -webkit-transform: rotate(70deg) translate(15em) rotate(-70deg);
+        transform: rotate(70deg) translate(15em) rotate(-70deg);
+    }
+    .learning_study>*:nth-of-type(5) {
+        -webkit-transform: rotate(112deg) translate(17.5em) rotate(-112deg);
+        transform: rotate(112deg) translate(17.5em) rotate(-112deg);
+    }
+    /* Learning and study bubbles over */
+    /* only at murdoch bubbles */
+    .only_murdoch>*:nth-of-type(1) {
+        -webkit-transform: rotate(235deg) translate(25em) rotate(-235deg);
+        transform: rotate(235deg) translate(25em) rotate(-235deg);
+        width: 112px;
+    }
+    .only_murdoch>*:nth-of-type(2) {
+        -webkit-transform: rotate(205deg) translate(24em) rotate(-205deg);
+        transform: rotate(205deg) translate(24em) rotate(-205deg);
+    }
+    .only_murdoch>*:nth-of-type(3) {
+        -webkit-transform: rotate(175deg) translate(25em) rotate(-175deg);
+        transform: rotate(175deg) translate(25em) rotate(-175deg);
+        max-width: 157px;
+    }
+    .only_murdoch>*:nth-of-type(4) {
+        -webkit-transform: rotate(140deg) translate(20em) rotate(-140deg);
+        transform: rotate(140deg) translate(20em) rotate(-140deg);
+    }
+    .only_murdoch>*:nth-of-type(5) {
+        -webkit-transform: rotate(95deg) translate(16.5em) rotate(-95deg);
+        transform: rotate(95deg) translate(16.5em) rotate(-95deg);
+        width: 115px;
+    }
+}
+
+@media (max-width: 800px) {
+    .flex-container {
+        padding: 0 30px;
+        margin: 30px auto;
+    }
+    .col-left {
+        left: -115px;
+    }
+    .col-image {
+        transform: scale(0.78);
+        -webkit-transform: scale(0.78);
+        right: -120px;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex-container {
+        display: block;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        margin: 120px auto;
+    }
+    .col-copy {
+        max-width: 100%;
+    }
+    .col-left {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+        left: -235px;
+    }
+    .col-image {
+        right: -45px;
+        width: 500px;
+        height: 500px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+    }
+    .image {
+        width: 350px;
+        height: 350px;
+    }
+    .float-right {
+        float: none;
+    }
+    .circle {
+        max-width: 100px;
+    }
+    .circle::after {
+        top: -14px;
+        left: -14px;
+        padding: 14px;
+    }
+    .circle span {
+        font-size: 16px;
+    }
+    .circle span i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    /* Campus life bubbles */
+    .campus_life>*:nth-of-type(1) {
+        -webkit-transform: rotate(220deg) translate(19em) rotate(-220deg);
+        transform: rotate(220deg) translate(19em) rotate(-220deg);
+        width: 80px;
+    }
+    .campus_life>*:nth-of-type(2) {
+        -webkit-transform: rotate(195deg) translate(19.5em) rotate(-195deg);
+        transform: rotate(195deg) translate(19.5em) rotate(-195deg);
+    }
+    .campus_life>*:nth-of-type(3) {
+        -webkit-transform: rotate(160deg) translate(17em) rotate(-160deg);
+        transform: rotate(160deg) translate(17em) rotate(-160deg);
+        width: 80px;
+    }
+    .campus_life>*:nth-of-type(4) {
+        -webkit-transform: rotate(130deg) translate(14.5em) rotate(-130deg);
+        transform: rotate(130deg) translate(14.5em) rotate(-130deg);
+    }
+    /* Campus life bubbles over */
+    /* Learning and study bubbles */
+    .learning_study>*:nth-of-type(1) {
+        -webkit-transform: rotate(293deg) translate(17em) rotate(-293deg);
+        transform: rotate(293deg) translate(17em) rotate(-293deg);
+    }
+    .learning_study>*:nth-of-type(2) {
+        -webkit-transform: rotate(325deg) translate(14.5em) rotate(-325deg);
+        transform: rotate(325deg) translate(14.5em) rotate(-325deg);
+        width: 90px;
+    }
+    .learning_study>*:nth-of-type(3) {
+        -webkit-transform: rotate(0deg) translate(12.5em) rotate(-0deg);
+        transform: rotate(0deg) translate(12.5em) rotate(-0deg);
+    }
+    .learning_study>*:nth-of-type(4) {
+        -webkit-transform: rotate(45deg) translate(11.5em) rotate(-45deg);
+        transform: rotate(45deg) translate(11.5em) rotate(-45deg);
+    }
+    .learning_study>*:nth-of-type(5) {
+        -webkit-transform: rotate(90deg) translate(12em) rotate(-90deg);
+        transform: rotate(90deg) translate(12em) rotate(-90deg);
+        max-width: 101px;
+    }
+    /* Learning and study bubbles over */
+    /* only at murdoch bubbles */
+    .only_murdoch>*:nth-of-type(1) {
+        -webkit-transform: rotate(225deg) translate(20em) rotate(-225deg);
+        transform: rotate(225deg) translate(20em) rotate(-225deg);
+        width: 90px;
+    }
+    .only_murdoch>*:nth-of-type(2) {
+        -webkit-transform: rotate(200deg) translate(18em) rotate(-200deg);
+        transform: rotate(200deg) translate(18em) rotate(-200deg);
+    }
+    .only_murdoch>*:nth-of-type(3) {
+        -webkit-transform: rotate(200deg) translate(19.5em) rotate(-175deg);
+        transform: rotate(175deg) translate(19.5em) rotate(-175deg);
+        max-width: 126px;
+    }
+    .only_murdoch>*:nth-of-type(4) {
+        -webkit-transform: rotate(140deg) translate(15.5em) rotate(-140deg);
+        transform: rotate(140deg) translate(15.5em) rotate(-140deg);
+    }
+    .only_murdoch>*:nth-of-type(5) {
+        -webkit-transform: rotate(105deg) translate(13.5em) rotate(-105deg);
+        transform: rotate(105deg) translate(13.5em) rotate(-105deg);
+        width: 80px;
+    }
+}
+
+
+/* Responsive over */

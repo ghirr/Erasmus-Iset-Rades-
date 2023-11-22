@@ -1,0 +1,142 @@
+<!--<div style="background-image:url(../../../assets/images/22.jpg);padding-bottom: 100px;">
+<div class="background">
+	<div class="container" style="padding-top: 100px;width: 1000px;">
+
+		<iframe width="1000" height="360" id="gmap_canvas" src="https://maps.google.com/maps?q=iset rades&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+        <div class="row mt-5">
+	<div class="container">
+	  <div class="screen">
+		<div class="screen-header">
+		  <div class="screen-header-left">
+			<div class="screen-header-button close"></div>
+			<div class="screen-header-button maximize"></div>
+			<div class="screen-header-button minimize"></div>
+		  </div>
+		  <div class="screen-header-right">
+			<div class="screen-header-ellipsis"></div>
+			<div class="screen-header-ellipsis"></div>
+			<div class="screen-header-ellipsis"></div>
+		  </div>
+		</div>
+		<div class="screen-body">
+		  <div class="screen-body-item left">
+			<div class="app-title">
+			  <span>CONTACT</span>
+			  <span>US</span>
+			</div>
+			<div class="app-contact">CONTACT INFO : +216-71-256-354</div>
+		  </div>
+		  <div class="screen-body-item">
+			<div class="app-form">
+			  <div class="app-form-group">
+				<input class="app-form-control" placeholder="NAME" >
+			  </div>
+			  <div class="app-form-group">
+				<input class="app-form-control" placeholder="EMAIL">
+			  </div>
+			  <div class="app-form-group">
+				<input class="app-form-control" placeholder="CONTACT NO">
+			  </div>
+			  <div class="app-form-group message">
+				<input class="app-form-control" placeholder="MESSAGE">
+			  </div>
+			  <div class="app-form-group buttons">
+				<button class="app-form-button">SEND</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>-->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://maps.google.com/maps?q=iset rades&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+				<i class="fa fa-map-marker" aria-hidden="true"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+				<i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+				<i class="fa fa-mobile" aria-hidden="true"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form [formGroup]="contactForm" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" formControlName="name">
+                  <div class="text-danger"
+                  *ngIf="contactForm.controls['name'].invalid && ( contactForm.controls['name'].dirty || contactForm.controls['name'].touched) ">
+                  <div style="color: red"
+                      *ngIf="contactForm.controls['name'].errors?.['minlength'] ">
+                      plus
+                      2 caracteres</div>
+
+              </div>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" formControlName="email">
+                  <div class="text-danger"
+                  *ngIf="contactForm.controls['email'].invalid && ( contactForm.controls['email'].dirty || contactForm.controls['email'].touched) ">
+
+                  <div style="color: red"
+                      *ngIf="contactForm.controls['email'].errors?.['email'] ">
+                      Email Invalid</div>
+              </div>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" formControlName="subject">
+                <div class="text-danger"
+                  *ngIf="contactForm.controls['subject'].invalid && ( contactForm.controls['subject'].dirty || contactForm.controls['subject'].touched) ">
+                  <div style="color: red"
+                      *ngIf="contactForm.controls['subject'].errors?.['maxlength'] ">
+                      moins
+                      20 caracteres</div>
+
+              </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" formControlName="message"></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" (click)="contact(contactForm.value)">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->

@@ -1,0 +1,202 @@
+.hama{
+    padding-top: 250px;
+    padding-bottom: 150px;
+    width: 100vw;
+    min-height: 100vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Exo", Arial, sans-serif;
+    background-color: #eee;
+}
+h2{position: absolute;
+    top: 0;
+padding-top: 160px}
+
+/* Block */
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.cards {
+  width: 500%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+  background-image: url("../../../assets/images/a1.jpg");
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+  background-image: url("../../../assets/images/a2.jpg");
+}
+
+.card__clock {
+  vertical-align: middle;
+  fill: #ad7d52;
+}
+
+.card__time {
+  color: #ad7d52;
+  vertical-align: middle;
+}
+
+.card__clock-info {
+  float: right;
+}
+
+.card__img {
+  visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 10%;
+  height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card__info-hover {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+}
+
+.card__img--hover {
+  transition: 0.2s all ease-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  height: 235px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  top: 0;
+}
+
+.card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+}
+
+.card__info {
+  z-index: 2;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.card__category {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #868686;
+}
+
+.card__title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.card__by {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card__author {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
+}
+
+.card:hover .card__img--hover {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.card:hover .card__info {
+  background-color: transparent;
+  position: relative;
+}
+
+.card:hover .card__info-hover {
+  opacity: 1;
+}
+
+/** 
+ * CSS Locks
+ * min viewport 576px 
+ * max viewport 1400px
+ **/
+
+.cards {
+  /*
+   * min gap = 20
+   * max gap = 40
+  */
+  gap: calc(20px + (40 - 20) * ((100vw - 576px) / (1400 - 576)));
+}
+
+.card {
+  /*
+   * min width = 300
+   * max width = 600 
+  */
+  width: calc(300px + (600 - 300) * ((100vw - 576px) / (1400 - 576)));
+}
+
+.card__like {
+  /*
+   * min width = 18
+   * max width = 36 
+  */
+  width: calc(36px + (36 - 18) * ((100vw - 576px) / (1400 - 576)));
+}
+
+.card__clock {
+  /*
+   * min width = 20
+   * max width = 40 
+  */
+  width: calc(20px + (40 - 20) * ((100vw - 576px) / (1400 - 576)));
+}
+
+.card__time {
+  /*
+   * min font-size = 12
+   * max font-size = 24 
+  */
+  font-size: calc(24px + (24 - 12) * ((100vw - 576px) / (1400 - 576)));
+  margin-left: calc(5px + (10 - 5) * ((100vw - 576px) / (1400 - 576)));
+}
+
+.card__info {
+  padding: calc(16px + (32 - 16) * ((100vw - 576px) / (1400 - 576)))
+    calc(24px + (48 - 24) * ((100vw - 576px) / (1400 - 576)))
+    calc(24px + (48 - 24) * ((100vw - 576px) / (1400 - 576)))
+    calc(24px + (48 - 24) * ((100vw - 576px) / (1400 - 576)));
+}

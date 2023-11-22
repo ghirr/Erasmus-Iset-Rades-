@@ -1,0 +1,46 @@
+<section id="team" class="team-area" style="padding-top: 150px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="site-heading text-center">
+                    <h2>Our <span>Team</span></h2>
+                    <h4>Meet our awesome and expert team members</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row team-items" style="display: flex;">
+            <div class="col-md-4 single-item" *ngFor="let t of team">
+              <div class="item">
+                <div class="thumb">
+                  <img class="img-fluid" src="{{t.image}}" alt="Thumb">
+                  <div class="overlay">
+                    <h4>{{t.email}}</h4>
+                    <p>{{t.description}}</p>
+                    <div class="social">
+                      <ul>
+                        <li class="twitter">
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="facebook">
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="instagram">
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="info">
+                  <span class="message">
+                    <a href="#"><i class="fa fa-star-half-o" aria-hidden="true"></i></a>
+                  </span>
+                  <h4>{{t.name}}</h4>
+                  <span>{{t.profession}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+</section>

@@ -1,0 +1,70 @@
+<header-admin></header-admin>
+
+<div class="forms">
+  <div class="formbold-main-wrapper">
+    <div class="formbold-form-wrapper">
+      
+      <h1 class="h1 text-center text-dark">{{titre}}</h1>
+      <form #addProjectForm="ngForm"  (ngSubmit)="addEditProject()" enctype="multipart/form-data">
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label"> Project Name </label>
+          <input
+            type="text"
+            name="projectName"
+            id="projectName"
+            placeholder=""
+            class="formbold-form-input"
+            [(ngModel)]="project.projectName"
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+  
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Date Debut</label>
+          <input type="date" name="dateDebutProject" id="dateDebutProject" class="formbold-form-input"  [(ngModel)]="project.dateDebutProject" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label  class="formbold-form-label">Date Fin</label>
+          <input type="date" name="dateFinProject" id="dateFinProject" class="formbold-form-input"  [(ngModel)]="project.dateFinProject" [ngModelOptions]="{ standalone: true }"/>
+        </div>
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label">Catagorie</label>
+  
+          <select class="formbold-form-input" name="catagorie" id="catagorie" [(ngModel)]="project.catagorie" [ngModelOptions]="{ standalone: true }">
+            <option value="ka1">ka1</option>
+            <option value="cbhe">cbhe</option>
+          </select>
+        </div>
+  
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label"> Description </label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias nobis, omnis iusto recusandae enim? Consequatur ullam sint voluptatem eveniet, temporibus doloremque fugit vel excepturi, quas vero nemo iusto nisi?"
+            class="formbold-form-input"
+            [(ngModel)]="project.description"
+            [ngModelOptions]="{ standalone: true }"
+          ></textarea>
+        </div>
+  
+        <div class="formbold-mb-3">
+          <label class="formbold-form-label">
+            Project Image
+          </label>
+          <input
+          type="file"
+          name="image"
+          id="image"
+          class="formbold-form-input formbold-form-file"
+          #filePicker
+          (change)="onImageSelected($event)" multiple
+        />
+        </div>
+        
+  
+        <button class="formbold-btn" type="submit">{{button}}</button>
+      </form>
+    </div>
+  </div>
+</div>

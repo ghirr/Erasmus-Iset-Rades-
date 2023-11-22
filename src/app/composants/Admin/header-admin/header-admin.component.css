@@ -1,0 +1,127 @@
+.navbar {
+  background-color: #222D32;
+  color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 200ms ease;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-item {
+  position: relative; 
+  left: -2%;
+  top: 6%;
+  width: 150px;
+}
+
+.nav-link {
+  color: #27EF9F;
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-item.hover .nav-link {
+  color: #27EF9F;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #6e2929;
+  border-radius: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.logo_container{
+ padding-left: 20px;
+ padding-right: 30px;
+}
+.logo_text{
+  color: #27EF9F;
+}
+.btn_1 {
+  display: inline-block;
+  padding: 9.5px 28px;
+  border-radius: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-transform: capitalize;
+  color: #27EF9F;
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.user-image{
+  border-radius: 50%;
+  width: 70px; /* Set the desired width */
+  height: 60px;
+}
+/* line 34, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_button.scss */
+.btn_1:hover {
+  color: #27EF9F;
+  background-color: #8f6868;
+}
+
+@media (max-width: 576px) {
+  /* line 24, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_button.scss */
+  .btn_1 {
+    padding: 9.5px 28px;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 24, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_button.scss */
+  .btn_1 {
+    padding: 9.5px 28px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 24, E:/169 Dingo Restaurant/169 Dingo Restaurant/169_Dingo_Restautent_html/sass/_button.scss */
+  .btn_1 {
+    padding: 9.5px 28px;
+  }
+}

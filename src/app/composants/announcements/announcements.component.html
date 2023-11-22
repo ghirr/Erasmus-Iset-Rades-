@@ -1,0 +1,52 @@
+<div class="hama">
+	<section class="light">
+	  <div class="container py-2">
+		<div class="h1 text-center text-dark" id="pageHeaderTitle">Our Announcements</div>
+  
+		<ng-container *ngFor="let e of events; let i = index">
+		  <article class="postcard light yellow" [ngClass]="{'d-none': (i % 2 !== 0)}">
+			<div class="postcard__img_link">
+			  <img class="postcard__img" src="{{e.image}}" alt="Image Title" />
+			</div>
+			<div class="postcard__text t-dark">
+			  <h1 class="postcard__title blue"><a href="#">{{e.name}}</a></h1>
+			  <div class="postcard__subtitle small">
+				<time datetime="2020-05-25 12:00:00">
+				  <i class="fas fa-calendar-alt mr-2"></i>{{formatDate(e.dateDebut)}}
+				</time>
+			  </div>
+			  <div class="postcard__bar"></div>
+			  <div class="postcard__preview-txt">{{e.description}}</div>
+			  <ul class="postcard__tagbox">
+			  </ul>
+			</div>
+		  </article>
+  
+		  <article class="postcard light red" [ngClass]="{'d-none': (i % 2 == 0)}">
+			<div class="postcard__img_link">
+			  <img class="postcard__img" src="{{e.image}}" alt="Image Title" />	
+			</div>
+			<div class="postcard__text t-dark">
+			  <h1 class="postcard__title red"><a href="#">{{e.name}}</a></h1>
+			  <div class="postcard__subtitle small">
+				<time datetime="2020-05-25 12:00:00">
+				  <i class="fas fa-calendar-alt mr-2"></i>{{formatDate(e.dateDebut)}}
+				</time>
+			  </div>
+			  <div class="postcard__bar"></div>
+			  <div class="postcard__preview-txt">{{e.description}}</div>
+			  <ul class="postcard__tagbox">
+				<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+				<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+				<li class="tag__item play red">
+				  <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+				</li>
+			  </ul>
+			</div>
+		  </article>
+		</ng-container>
+  
+	  </div>
+	</section>
+  </div>
+  
